@@ -1,0 +1,26 @@
+
+---
+- name: Install Docker on Ubuntu
+  hosts: localhost
+  connection: local
+  become: yes
+
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Install required packages
+      apt:
+        name:
+          - ca-certificates
+          - curl
+        state: present
+
+    - name: Verify Docker installation
+      command: docker --version
+      register: docker_output
+
+    - name: Display Docker version
+      debug:
+        var: docker_output.stdout
