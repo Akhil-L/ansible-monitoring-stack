@@ -15,8 +15,8 @@ An automated Linux monitoring platform built with Ansible, Docker, Prometheus, G
 ## Architecture
 
 Ansible → Docker → Prometheus → Grafana
-↘ Node Exporter
-↘ Alertmanager
+-> Node Exporter
+-> Alertmanager
 
 ## Project Structure
 
