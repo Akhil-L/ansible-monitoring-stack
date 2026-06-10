@@ -1,31 +1,40 @@
-# ansible-monitoring-stack
+# Ansible Monitoring Stack
 
-Automated Linux infrastructure provisioning using Ansible with a full observability stack deployed via Docker Compose.
+An automated Linux monitoring platform built with Ansible, Docker, Prometheus, Grafana, Node Exporter, and Alertmanager.
 
-## What This Does
+## Features
 
-A single command provisions a Linux server, installs Docker, and deploys a complete monitoring stack:
+* Infrastructure automation using Ansible
+* Docker-based deployment
+* Prometheus metrics collection
+* Grafana dashboards and visualization
+* Node Exporter system monitoring
+* Alertmanager integration for alerting
+* One-command deployment using Ansible playbooks
 
-## Stack
+## Architecture
 
-| Tool | Purpose |
-|------|---------|
-| Ansible | Infrastructure automation |
-| Docker Compose | Container orchestration |
-| Prometheus | Metrics collection |
-| Grafana | Visualization & dashboards |
-| Node Exporter | System metrics (CPU, RAM, Disk) |
-| Alertmanager | Alerting & notifications |
+Ansible → Docker → Prometheus → Grafana
+↘ Node Exporter
+↘ Alertmanager
 
-## Structure
+## Project Structure
 
+```text
+ansible-monitoring-stack/
 ├── ansible/
-│   ├── inventory/hosts.ini
+│   ├── inventory/
 │   └── playbooks/
 │       ├── install-docker.yml
 │       ├── deploy-monitoring.yml
 │       └── full-setup.yml
-└── monitoring/
-├── docker-compose.yml
-├── prometheus.yml
-└── alertmanager.yml
+├── monitoring/
+│   ├── docker-compose.yml
+│   ├── prometheus.yml
+│   └── alertmanager.yml
+└── README.md
+```
+
+## Tech Stack
+
+Ansible • Docker • Prometheus • Grafana • Node Exporter • Alertmanager • Linux
